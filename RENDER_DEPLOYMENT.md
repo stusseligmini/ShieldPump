@@ -28,9 +28,9 @@ RATE_LIMIT_WINDOW=60
 
 ## 🌐 **RENDER DEPLOYMENT STEPS**
 
-### 1️⃣ **Create Web Service on Render**
+### 1️⃣ **Create Worker Service on Render**
 1. Go to [render.com](https://render.com)
-2. Click "New +" → "Web Service"
+2. Click "New +" → "**Background Worker**" (NOT Web Service!)
 3. Connect your GitHub repository: `stusseligmini/ShieldPump`
 4. Configure settings:
 
@@ -42,6 +42,7 @@ Region: Oregon (US West)
 Branch: main
 Build Command: pip install -r requirements.txt
 Start Command: python main_user_friendly.py
+Service Type: Background Worker
 ```
 
 ### 3️⃣ **Environment Variables in Render**
@@ -67,7 +68,7 @@ Add these in Render Dashboard → Environment:
 ### Create `render.yaml` (optional but recommended):
 ```yaml
 services:
-- type: web
+- type: worker
   name: pumpshield-pro-bot
   env: python
   plan: free
@@ -113,7 +114,7 @@ cryptography==46.0.1
 - [ ] (Optional) Get your Telegram User ID from @userinfobot
 
 ### In Render Dashboard:
-- [ ] Create new Web Service
+- [ ] Create new **Background Worker** (NOT Web Service!)
 - [ ] Connect GitHub repository
 - [ ] Set build command: `pip install -r requirements.txt`
 - [ ] Set start command: `python main_user_friendly.py`

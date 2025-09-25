@@ -1,5 +1,5 @@
 services:
-- type: web
+- type: worker
   name: pumpshield-pro-bot
   env: python
   plan: free
