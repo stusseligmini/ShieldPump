@@ -1,0 +1,10 @@
+python-telegram-bot==20.7
+python-dotenv
+solders
+solana
+requests
+aiohttp
+asyncio-throttle
+retry
+pydantic
+cryptography
