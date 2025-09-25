@@ -8,7 +8,7 @@
 TELEGRAM_TOKEN=7293922941:AAEwsYykk-3bdN_ngeI1o1OON0CV0h_WLnM
 
 # Python Environment
-PYTHON_VERSION=3.12
+PYTHON_VERSION=3.11
 ```
 
 ### ⚙️ **OPTIONAL SECURITY VARIABLES:**
@@ -51,7 +51,7 @@ Add these in Render Dashboard → Environment:
 | Variable | Value | Required |
 |----------|-------|----------|
 | `TELEGRAM_TOKEN` | `7293922941:AAEwsYykk-3bdN_ngeI1o1OON0CV0h_WLnM` | ✅ YES |
-| `PYTHON_VERSION` | `3.12` | ✅ YES |
+| `PYTHON_VERSION` | `3.11` | ✅ YES |
 | `ADMIN_USER_ID` | Your Telegram user ID | ❌ Optional |
 | `MAX_SOL_PER_TRADE` | `1.0` | ❌ Optional |
 | `RATE_LIMIT_REQUESTS` | `10` | ❌ Optional |
@@ -76,14 +76,14 @@ services:
   startCommand: python main_user_friendly.py
   envVars:
   - key: PYTHON_VERSION
-    value: "3.12"
+    value: "3.11"
   - key: TELEGRAM_TOKEN
     sync: false  # Set this in dashboard for security
 ```
 
 ### Create `runtime.txt`:
 ```
-python-3.12.0
+python-3.11.5
 ```
 
 ---

@@ -5,6 +5,3 @@ services:
   plan: free
   buildCommand: pip install -r requirements.txt
   startCommand: python main_user_friendly.py
-  envVars:
-  - key: PYTHON_VERSION
-    value: "3.12"
